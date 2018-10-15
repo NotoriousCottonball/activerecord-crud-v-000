@@ -45,7 +45,7 @@ def can_find_by_multiple_attributes
 end
 
 def can_find_using_where_clause_and_be_sorted
-  movie = Movies.where(["release_date > ?"])
+  movie = Movies.where(["release_date > ?", 2002]).order(release_date: :desc)
 end
 
 def can_be_found_updated_and_saved
