@@ -19,6 +19,8 @@ def can_be_created_in_a_block(args = {title: "Home Alone", release_date: 1990})
   Movie.create do |m|
     args.each do |k, v|
       m.send("#{k}=", v)
+    end
+  end
   
 end
 
